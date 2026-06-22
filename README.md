@@ -12,8 +12,8 @@
 
 ## 🔥 News
 
-- **2026/07** 🎉 ViTexQA has been accepted to **ECCV 2026**.
-- **2026/07** 🤗 ViTexQA dataset is released on HuggingFace.
+- **2026/06** 🎉 ViTexQA has been accepted to **ECCV 2026**.
+- **2026/06** 🤗 ViTexQA dataset is released on HuggingFace.
 - **Coming Soon** Training code for FrameThinker.
 
 ---
@@ -26,7 +26,7 @@ Unlike existing video text QA datasets, where many questions can still be answer
 
 <div align="center">
 
-<img src="assets/teaser.png" width="95%">
+<img src="assets/0.png" width="95%">
 
 </div>
 
@@ -34,7 +34,7 @@ Our contributions include:
 
 - ✅ 5,147 videos
 - ✅ 6,864 QA pairs
-- ✅ 100% verified multi-frame dependency
+- ✅ Multi-frame dependency
 - ✅ Temporal Chain-of-Thought annotations
 - ✅ Diverse real-world scenarios (sports, news, driving, tutorials, etc.)
 - ✅ Synthetic rolling-text video generation pipeline
@@ -45,7 +45,7 @@ Our contributions include:
 
 <div align="center">
 
-<img src="assets/statistics.png" width="95%">
+<img src="assets/1.png" width="95%">
 
 </div>
 
@@ -55,11 +55,56 @@ ViTexQA contains
 |------|------:|
 | Videos | 5,147 |
 | QA pairs | 6,864 |
-| Multi-frame dependency | **100%** |
 | Categories | 30 |
 | Duration | 363 Hours |
 
 ---
+
+---
+
+# 📝 Annotation Pipeline
+
+To ensure that every question requires **genuine multi-frame temporal perception**, we develop a rigorous three-round human annotation pipeline.
+
+<div align="center">
+
+<img src="assets/2.png" width="95%">
+
+</div>
+
+The annotation process consists of three stages:
+
+### Round 1 · Initial Annotation
+
+- Two annotators independently create question-answer pairs.
+- Questions must require integrating textual information across multiple frames.
+- Single-frame answerable questions are rejected.
+
+### Round 2 · Quality Evaluation
+
+Each sample is reviewed by senior evaluators according to:
+
+- Multi-frame dependency
+- Answer correctness
+- Question clarity
+
+Samples are assigned three quality levels:
+
+- **Score 1:** Reject
+- **Score 2:** Revision Required
+- **Score 3:** Accepted
+
+### Round 3 · Revision
+
+Samples requiring revision are returned to expert annotators for refinement and re-evaluation until all annotations satisfy the highest quality standard.
+
+This iterative annotation strategy guarantees:
+
+- ✅ Multi-frame dependency
+- ✅ High-quality QA pairs
+- ✅ Accurate temporal reasoning annotations
+- ✅ Diverse and unambiguous questions
+
 
 # 📥 Dataset Download
 
@@ -74,26 +119,22 @@ Download includes:
 ViTexQA/
 │
 ├── train.json
-├── val.json
 ├── test.json
 │
-├── videos/
-│
-├── cot_annotations/
-│
-├── metadata/
-│
-└── README.md
+└── videos/
+  ├── Real_video/
+  └── Synthetic_video/
 ```
 
 Each sample contains
 
-- video path
+- index
+- video_name
 - question
 - answer
 - temporal CoT
-- timestamps
-- metadata
+- duration
+- category
 
 ---
 
@@ -102,16 +143,14 @@ Each sample contains
 We also release the synthetic rolling-text video generation pipeline used in the paper.
 
 ```
-Synthetic_video/
-
-├── backgrounds/
-├── corpus/
-├── fonts/
-├── generate_video.py
-├── render_text.py
-├── animation.py
-├── transition.py
-└── utils.py
+synthetic/
+├── ILSVRC2012/
+├── TextQA/
+├── font/
+├── textvqa.txt
+├── words.txt
+├── image2video_rolling.py
+└── image2video_textqa.py
 ```
 
 The pipeline supports
@@ -129,45 +168,26 @@ The pipeline supports
 Example
 
 ```bash
-python generate_video.py \
-    --output output_dir \
-    --num_videos 100
+python image2video_rolling.py 
+python image2video_textqa.py
 ```
 
 Generated videos can be directly used for training and evaluation.
 
 ---
 
-# 📂 Repository Structure
-
-```
-ViTexQA/
-
-├── assets/
-│
-├── Synthetic_video/
-│
-├── examples/
-│
-├── LICENSE
-├── README.md
-└── requirements.txt
-```
-
----
 
 # 📷 Examples
 
 <div align="center">
 
-<img src="assets/example1.png" width="90%">
+<img src="assets/3.png" width="90%">
 
-<img src="assets/example2.png" width="90%">
 
 </div>
 
 ---
-
+<!-- 
 # 📄 Paper
 
 If you find our work useful, please consider citing
@@ -191,4 +211,4 @@ We thank all annotators and the open-source community for making this project po
 
 # ⭐ Star
 
-If ViTexQA is useful for your research, please consider giving this repository a ⭐.
+If ViTexQA is useful for your research, please consider giving this repository a ⭐. -->
