@@ -1,0 +1,5 @@
+textvqa/train_images/583bc452eb73e040.jpg	what is the brand of this beer?	tsingtao	(447.6,328.4),(570.8,364.4)
+textvqa/train_images/74c35189177cc3d5.jpg	what website is on the white board?	flickr.com/ybillboard	(215,517),(487,575)
+textvqa/train_images/979857094441de67.jpg	what is the first word of the second paragraph?	moreover	(166.4,672.8),(232.4,687.6)
+textvqa/train_images/3ac64377c437e07f.jpg	what is the name of the drink stand?	caffetteria	(250,278),(624.667,368.667)
+textvqa/train_images/1d7ed1d5409be61e.jpg	who wrote reality check?	guy kawasaki	(231,619),(398.5,654)
