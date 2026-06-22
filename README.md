@@ -4,7 +4,7 @@
 
 [![ECCV 2026](https://img.shields.io/badge/ECCV-2026-blue.svg)]()
 [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)]()
-[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/...)
+[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Zhentao1/ViTexQA/tree/main)
 
 </div>
 
@@ -111,7 +111,7 @@ This iterative annotation strategy guarantees:
 The complete dataset is hosted on HuggingFace.
 
 > **HuggingFace:**  
-> https://huggingface.co/datasets/xxxxx/ViTexQA
+> https://huggingface.co/datasets/Zhentao1/ViTexQA/tree/main
 
 Download includes:
 
