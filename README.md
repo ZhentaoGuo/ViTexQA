@@ -4,7 +4,7 @@
 
 [![ECCV 2026](https://img.shields.io/badge/ECCV-2026-blue.svg)]()
 [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)]()
-[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Zhentao1/ViTexQA/tree/main)
+[![Modelscope Dataset](https://img.shields.io/badge/Modelscope-Dataset-purple)](https://www.modelscope.cn/datasets/faker12345/ViTexQA)
 
 </div>
 
@@ -13,7 +13,7 @@
 ## 🔥 News
 
 - **2026/06** 🎉 ViTexQA has been accepted to **ECCV 2026**.
-- **2026/06** 🤗 ViTexQA dataset is released on HuggingFace.
+- **2026/06** 🤗 ViTexQA dataset is released on Modelscope.
 - **Coming Soon** Training code for FrameThinker.
 
 ---
@@ -108,10 +108,10 @@ This iterative annotation strategy guarantees:
 
 # 📥 Dataset Download
 
-The complete dataset is hosted on HuggingFace.
+The complete dataset is hosted on Modelscope.
 
-> **HuggingFace:**  
-> https://huggingface.co/datasets/Zhentao1/ViTexQA/tree/main
+> **Modelscope:**  
+> https://www.modelscope.cn/datasets/faker12345/ViTexQA
 
 Download includes:
 
